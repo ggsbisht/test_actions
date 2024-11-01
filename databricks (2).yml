@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=bundle_config_schema.json
+bundle:
+  name: rest_api_test
+
+include:
+  - resources/*.yml
+
+targets:
+  development:
+    mode: development
+    default: true
+    workspace:
+      host: https://adb-6777798819429555.15.azuredatabricks.net
+
+resources:
+  clusters:
+    - job_cluster_key: rest_api_test_cluster
+      new_cluster:
+        spark_version: 12.2.x-scala2.12
+        node_type_id: Standard_F8
+        spark_conf:
+          spark.databricks.delta.preview.enabled: 'true'
+          spark.databricks.delta.schema.autoMerge.enabled: 'true'
+        runtime_engine: STANDARD
+        autoscale:
+          min_workers: 2
+          max_workers: 8
