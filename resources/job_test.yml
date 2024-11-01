@@ -1,0 +1,24 @@
+resources:
+  jobs:
+    rest_api_test:
+      name: rest_api_test
+
+
+      tasks:
+        - task_key: rest_api_test
+          job_cluster_key: rest_api_test_cluster
+          notebook_task:
+            notebook_path: ./src/wtest
+
+  clusters:
+    - job_cluster_key: rest_api_test_cluster
+      new_cluster:
+        spark_version: 12.2.x-scala2.12
+        node_type_id: Standard_F8
+        spark_conf:
+          spark.databricks.delta.preview.enabled: 'true'
+          spark.databricks.delta.schema.autoMerge.enabled: 'true'
+        runtime_engine: STANDARD
+        autoscale:
+          min_workers: 2
+          max_workers: 8
