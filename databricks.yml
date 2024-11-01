@@ -10,7 +10,7 @@ targets:
     mode: development
     default: true
     workspace:
-      host: https://adb-6777798819429555.15.azuredatabricks.net
+      host: https://adb-2688437013965408.8.azuredatabricks.net
 
 resources:
   clusters:
