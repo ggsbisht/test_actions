@@ -32,7 +32,7 @@ jobs:
         env:
           # http_proxy: 'http://proxy.gtm.lilly.com:9000'
           # https_proxy: 'http://proxy.gtm.lilly.com:9000'
-          DATABRICKS_HOST: 'https://adb-6777798819429555.15.azuredatabricks.net'
+          DATABRICKS_HOST: 'https://adb-2688437013965408.8.azuredatabricks.net'
           # ARM_CLIENT_ID: 'accf62f0-2274-4d51-9bb7-103f11e02ab1'
           # ARM_CLIENT_SECRET: 'L~e8Q~oDiixHEHeCttAqU1Oi7jntQHX~M0E1naR9'
           # ARM_TENANT_ID: '18a59a81-eea8-4c30-948a-d8824cdc2580'
@@ -47,7 +47,7 @@ jobs:
         env:
           # http_proxy: 'http://proxy.gtm.lilly.com:9000'
           # https_proxy: 'http://proxy.gtm.lilly.com:9000'
-          DATABRICKS_HOST: 'https://adb-6777798819429555.15.azuredatabricks.net'
+          DATABRICKS_HOST: 'https://adb-2688437013965408.8.azuredatabricks.net'
           # ARM_CLIENT_ID: 'accf62f0-2274-4d51-9bb7-103f11e02ab1'
           # ARM_CLIENT_SECRET: 'L~e8Q~oDiixHEHeCttAqU1Oi7jntQHX~M0E1naR9'
           # ARM_TENANT_ID: '18a59a81-eea8-4c30-948a-d8824cdc2580'
