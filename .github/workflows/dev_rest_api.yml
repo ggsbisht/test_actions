@@ -1,0 +1,60 @@
+# Specify the trigger event to start the build pipeline.
+# In this case, new code merged into the release branch initiates a new build.
+
+name: "rest_api_test"
+
+# Ensure that only a single job or workflow using the same concurrency group
+# runs at a time.
+concurrency: 1
+
+# Trigger this workflow whenever a pull request is pushed to the repo's
+# main branch.
+on:
+  push:
+    branches:
+      - APIREST_TEST
+
+jobs:
+  deploy:
+    name: "Deploy bundle"
+    runs-on: ubuntu-latest
+    
+    steps:
+      # Check out this repo, so that this workflow can access it.
+      - uses: actions/checkout@v3
+
+      # Download the Databricks CLI.
+      # See https://github.com/databricks/setup-cli
+      - uses: databricks/setup-cli@main
+
+      - run: databricks bundle validate 
+        working-directory: .
+        env:
+          http_proxy: 'http://proxy.gtm.lilly.com:9000'
+          https_proxy: 'http://proxy.gtm.lilly.com:9000'
+          DATABRICKS_HOST: 'https://adb-6777798819429555.15.azuredatabricks.net'
+          # ARM_CLIENT_ID: 'accf62f0-2274-4d51-9bb7-103f11e02ab1'
+          # ARM_CLIENT_SECRET: 'L~e8Q~oDiixHEHeCttAqU1Oi7jntQHX~M0E1naR9'
+          # ARM_TENANT_ID: '18a59a81-eea8-4c30-948a-d8824cdc2580'
+          authentication-type: token
+          DATABRICKS_TOKEN: 'dapi6b45eaa10e0939e14d65743b4cdabfae-2'
+          DATABRICKS_BUNDLE_ENV: development
+          #DATABRICKS_BUNDLE_ENV:${{github.event.inputs.Environment}}
+
+   
+      - run: databricks bundle deploy 
+        working-directory: .
+        env:
+          http_proxy: 'http://proxy.gtm.lilly.com:9000'
+          https_proxy: 'http://proxy.gtm.lilly.com:9000'
+          DATABRICKS_HOST: 'https://adb-6777798819429555.15.azuredatabricks.net'
+          # ARM_CLIENT_ID: 'accf62f0-2274-4d51-9bb7-103f11e02ab1'
+          # ARM_CLIENT_SECRET: 'L~e8Q~oDiixHEHeCttAqU1Oi7jntQHX~M0E1naR9'
+          # ARM_TENANT_ID: '18a59a81-eea8-4c30-948a-d8824cdc2580'
+          authentication-type: token
+          DATABRICKS_TOKEN: 'dapi6b45eaa10e0939e14d65743b4cdabfae-2'
+          DATABRICKS_BUNDLE_ENV: development
+          #DATABRICKS_BUNDLE_ENV:${{github.event.inputs.Environment}}
+        
+
+
