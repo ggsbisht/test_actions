@@ -3,13 +3,14 @@ resources:
     rest_api_test:
       name: rest_api_test
 
+
       tasks:
         - task_key: rest_api_test
           job_cluster_key: rest_api_test_cluster
           notebook_task:
             notebook_path: /resources/src/wtest
 
-  job_clusters:
+  clusters:
     - job_cluster_key: rest_api_test_cluster
       new_cluster:
         spark_version: 12.2.x-scala2.12
