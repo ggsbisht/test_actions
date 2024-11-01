@@ -12,7 +12,7 @@ concurrency: 1
 on:
   push:
     branches:
-      - test_actions
+      - main
 
 jobs:
   deploy:
