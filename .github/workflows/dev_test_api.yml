@@ -15,8 +15,8 @@ on:
       - main
 
 jobs:
-  deploy:
-    name: "Deploy bundle"
+  Validate:
+    name: "Validate bundle"
     runs-on: ubuntu-latest
     
     steps:
@@ -41,7 +41,18 @@ jobs:
           DATABRICKS_BUNDLE_ENV: development
           #DATABRICKS_BUNDLE_ENV:${{github.event.inputs.Environment}}
 
-   
+  deploy:
+    name: "Deploy bundle"
+    runs-on: ubuntu-latest
+    
+    steps:
+      # Check out this repo, so that this workflow can access it.
+      - uses: actions/checkout@v3
+
+      # Download the Databricks CLI.
+      # See https://github.com/databricks/setup-cli
+      - uses: databricks/setup-cli@main
+
       - run: databricks bundle deploy 
         working-directory: .
         env:
