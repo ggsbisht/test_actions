@@ -9,6 +9,7 @@ resources:
             job_cluster_key: rest_api_test_cluster
             notebook_task:
               notebook_path: /resources/src/wtest.ipynb
+              source: GIT
 
       job_clusters:
         - job_cluster_key: rest_api_test_cluster
