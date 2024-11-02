@@ -12,11 +12,11 @@ targets:
     workspace:
       host: https://adb-2688437013965408.8.azuredatabricks.net
 
-permissions:
-  - user_name: gajendra.bisht@outlook.com
-    level: CAN_MANAGE
-run_as:
-    user_name: gajendra.bisht@outlook.com
+    permissions:
+      - user_name: gajendra.bisht@outlook.com
+        level: CAN_MANAGE
+    run_as:
+        user_name: gajendra.bisht@outlook.com
 
 resources:
   clusters:
