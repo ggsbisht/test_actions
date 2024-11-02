@@ -12,6 +12,12 @@ targets:
     workspace:
       host: https://adb-2688437013965408.8.azuredatabricks.net
 
+permissions:
+  - user_name: gajendra.bisht@outlook.com
+    level: CAN_MANAGE
+run_as:
+    user_name: gajendra.bisht@outlook.com
+
 resources:
   clusters:
     - job_cluster_key: rest_api_test_cluster
@@ -26,13 +32,7 @@ resources:
           min_workers: 2
           max_workers: 8
 
-  run_as:
-      # This runs as {{user_name}} in production. Alternatively,
-      # a service principal could be used here using service_principal_name
-    user_name: gajendra.bisht@outlook.com
 
-# permissions:
-#   - user_name: DEV_ADMINS
-#     level: CAN_MANAGE
+
 
 
