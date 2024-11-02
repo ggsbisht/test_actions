@@ -28,5 +28,5 @@ resources:
 
 permissions:
   - user_name: gajendra.singh@outlook.com
-    level: CAN_RUN
+    level: CAN_MANAGE
 
