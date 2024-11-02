@@ -18,19 +18,19 @@ targets:
     run_as:
         user_name: gajendra.bisht@outlook.com
 
-resources:
-  clusters:
-    - job_cluster_key: rest_api_test_cluster
-      new_cluster:
-        spark_version: 12.2.x-scala2.12
-        node_type_id: Standard_F8
-        spark_conf:
-          spark.databricks.delta.preview.enabled: 'true'
-          spark.databricks.delta.schema.autoMerge.enabled: 'true'
-        runtime_engine: STANDARD
-        autoscale:
-          min_workers: 2
-          max_workers: 8
+# resources:
+#   clusters:
+#     - job_cluster_key: rest_api_test_cluster
+#       new_cluster:
+#         spark_version: 12.2.x-scala2.12
+#         node_type_id: Standard_F8
+#         spark_conf:
+#           spark.databricks.delta.preview.enabled: 'true'
+#           spark.databricks.delta.schema.autoMerge.enabled: 'true'
+#         runtime_engine: STANDARD
+#         autoscale:
+#           min_workers: 2
+#           max_workers: 8
 
 
 
