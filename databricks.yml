@@ -25,3 +25,8 @@ resources:
         autoscale:
           min_workers: 2
           max_workers: 8
+
+permissions:
+  - user_name: gajendra.singh@outlook.com
+    level: CAN_RUN
+
