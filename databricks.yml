@@ -29,7 +29,7 @@ resources:
   run_as:
       # This runs as {{user_name}} in production. Alternatively,
       # a service principal could be used here using service_principal_name
-    user_name: gajendra.bishg@outlook.com
+    user_name: gajendra.bisht@outlook.com
 
 # permissions:
 #   - user_name: DEV_ADMINS
