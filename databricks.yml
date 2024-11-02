@@ -35,8 +35,4 @@ resources:
 #   - user_name: DEV_ADMINS
 #     level: CAN_MANAGE
 
-  git_source:
-    git_url:https://github.com/ggsbisht/test_actions.git
-    git_provider:"Github"
-    git_branch:main
 
