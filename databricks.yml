@@ -26,7 +26,12 @@ resources:
           min_workers: 2
           max_workers: 8
 
-permissions:
-  - user_name: gajendra.singh@outlook.com
-    level: CAN_MANAGE
+  run_as:
+      # This runs as {{user_name}} in production. Alternatively,
+      # a service principal could be used here using service_principal_name
+    user_name: gajendra.bishg@outlook.com
+
+# permissions:
+#   - user_name: DEV_ADMINS
+#     level: CAN_MANAGE
 
