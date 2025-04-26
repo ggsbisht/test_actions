@@ -30,8 +30,6 @@ jobs:
       - run: databricks bundle validate 
         working-directory: .
         env:
-          # http_proxy: 'http://proxy.gtm.lilly.com:9000'
-          # https_proxy: 'http://proxy.gtm.lilly.com:9000'
           DATABRICKS_HOST: 'https://adb-4303196440261353.13.azuredatabricks.net'
           # ARM_CLIENT_ID: 'accf62f0-2274-4d51-9bb7-103f11e02ab1'
           # ARM_CLIENT_SECRET: 'L~e8Q~oDiixHEHeCttAqU1Oi7jntQHX~M0E1naR9'
