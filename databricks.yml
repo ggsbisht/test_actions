@@ -11,6 +11,7 @@ targets:
     default: true
     workspace:
       host: https://adb-4303196440261353.13.azuredatabricks.net
+      auth_type: pat
 
     permissions:
       - user_name: gajendra.bisht@outlook.com
