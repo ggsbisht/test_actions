@@ -36,7 +36,7 @@ jobs:
           # ARM_CLIENT_ID: 'accf62f0-2274-4d51-9bb7-103f11e02ab1'
           # ARM_CLIENT_SECRET: 'L~e8Q~oDiixHEHeCttAqU1Oi7jntQHX~M0E1naR9'
           # ARM_TENANT_ID: '18a59a81-eea8-4c30-948a-d8824cdc2580'
-          authentication-type: token
+          #authentication-type: token
           DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
           DATABRICKS_BUNDLE_ENV: development
           #DATABRICKS_BUNDLE_ENV:${{github.event.inputs.Environment}}
@@ -62,7 +62,7 @@ jobs:
           # ARM_CLIENT_ID: 'accf62f0-2274-4d51-9bb7-103f11e02ab1'
           # ARM_CLIENT_SECRET: 'L~e8Q~oDiixHEHeCttAqU1Oi7jntQHX~M0E1naR9'
           # ARM_TENANT_ID: '18a59a81-eea8-4c30-948a-d8824cdc2580'
-          authentication-type: token
+          #authentication-type: token
           DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
           DATABRICKS_BUNDLE_ENV: development
           #DATABRICKS_BUNDLE_ENV:${{github.event.inputs.Environment}}
