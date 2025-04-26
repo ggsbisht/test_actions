@@ -37,6 +37,7 @@ jobs:
           #authentication-type: token
           DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
           DATABRICKS_BUNDLE_ENV: development
+          DATABRICKS_CONFIG_PROFILE: DEFAULT
           #DATABRICKS_BUNDLE_ENV:${{github.event.inputs.Environment}}
 
   deploy:
